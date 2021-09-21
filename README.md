@@ -29,7 +29,7 @@ Antes de iniciar con la creación de la aplicación es necesario verificar que t
 dotnet --version
 ```
 Luego de esto tenga en cuenta los siguientes pasos para crear y ejecutar correctamente la aplicación, en caso de tener una aplicación creada con anterioridad omita el primer paso.
-1. en la terminal de su computador ingrese el siguiente comando:
+1. En la terminal de su computador ingrese el siguiente comando:
 ```
 dotnet new webApp -o <DIRECTORIO> --no-https
 ```
@@ -46,7 +46,7 @@ dotnet new webApp -o <DIRECTORIO> --no-https
 dotnet watch run
 ```
    
-luego de ejecutar este comando espere algunos minutos a que la aplicación muestre que está escuchando en http: // localhost: 5000 y que el navegador se inicie en esa dirección. para detener este proceso de validación y continuar con la publicación de la aplicación seleccione Ctrl+C para salir y cierre de ventana de la aplicación en el navegador.
+luego de ejecutar este comando espere algunos minutos a que la aplicación muestre que está escuchando en http: // localhost: 5000 y que el navegador se inicie                en esa dirección. Para detener este proceso de validación y continuar con la publicación de la aplicación seleccione Ctrl+C para salir y cierre de ventana de la aplicación en el navegador.
    
 <p align="center"><img width="700" src="https://github.com/emeloibmco/IBM-Cloud-Code-Engine-.Net/blob/ddf97cc26befd9268fa5fe40add910fca560f362/Images/ejecutar.png"></p
 
@@ -66,9 +66,7 @@ este proceso debe otorgar un mensaje similar al que se muestra a continuación
       
 ## Crear el archivo Dockerfile
 
-Una vez la aplicación se haya creado y ejecutado, es necesario generar una imagen, para esto necesitamos de un archivo que contenga las instrucciones paso a paso para desplegar la imagen en un contenedor y así poder ejecutar la aplicación desde cualquier lugar, este archivo se llama Dockerfile. Para crear el archivo tenga en cuenta los siguientes pasos:
-
-1. En la terminal de su computador muévase con el comando cd hasta la carpeta creada anteriormente <DIRECTORIO>, una vez en la carpeta ejecute el siguiente comando
+Una vez la aplicación se haya creado y ejecutado, es necesario generar una imagen, para esto necesitamos de un archivo que contenga las instrucciones paso a paso para desplegar la imagen en un contenedor y así poder ejecutar la aplicación desde cualquier lugar, este archivo se llama Dockerfile. Para crear el archivo, en la terminal de su computador muévase con el comando cd hasta la carpeta creada anteriormente <DIRECTORIO>, una vez en la carpeta ejecute el siguiente comando
    
 ```
 vi Dockerfile
@@ -84,3 +82,24 @@ ENTRYPOINT ["dotnet", "myWebApp.dll"]
 EXPOSE 8080
 ENV ASPNETCORE_URLS=http://*:8080
 
+```
+      
+
+<br />
+
+## Desplegar la aplicación en Code Engine
+### Opción1: Comenzar con el código fuente
+
+Para desplegar la aplicacion en Code Engine mediante el codigo fuente es necesario tener el codigo en un repositorio de github, en este caso el codigo de la aplicacion basica generada ya se encuentra en este repositorio. Si se tiene una aplicacion distinta se debe generar el repositorio.
+
+para generar la aplicacion a partir del codigo fuente tenga en cuenta los siguientes pasos:
+      
+1. Desde el menú de navegación o menú de hamburguesa seleccione la pestaña ```Code Engine```
+2. Si no tiene un proyecto creado de clik sobre el boton ```Proyectos```. Esto lo llevara a una nueva ventana, aqui de click sobre el boton ```Crear```
+   2.1 en esta ventana ingrese la informacion necesaria para crear un nuevo proyecto:
+      * ```Ubicacion/location``: Seleccione la ubicación en la cual desea implementar el proyecto.
+      * ```Nombre/Name```: Ingrese un nombre unico para el proyecto.
+      * ```Grupo de recursos/Resource group```: Seleccione el grupo de recursos sobre el cual desea desplegar el proyecto.
+      * ```Etiquetas/tags```: Agregue etiquetas si lo considera necesario.
+      
+     
