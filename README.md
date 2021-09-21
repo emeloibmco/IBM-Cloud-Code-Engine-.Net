@@ -86,17 +86,16 @@ ENV ASPNETCORE_URLS=http://*:8080
 Antes de desplegar la aplicación en Code Engine es necesario crear un proyecto y un acceso al registro dentro de este proyecto, para esto tenga en cuenta los siguientes pasos:
 
 1. Desde el menú de navegación o menú de hamburguesa seleccione la pestaña ```Code Engine```
+2. Si no tiene un proyecto creado de click sobre el botón ```Proyectos```. Esto lo llevara a una nueva ventana, aquí de click sobre el botón ```Crear```
 
-
-3. Si no tiene un proyecto creado de click sobre el botón ```Proyectos```. Esto lo llevara a una nueva ventana, aquí de click sobre el botón ```Crear```
    2.1 En esta ventana ingrese la información necesaria para crear un nuevo proyecto:
       * ```Ubicación/location```: Seleccione la ubicación en la cual desea implementar el proyecto.
       * ```Nombre/Name```: Ingrese un nombre único para el proyecto.
       * ```Grupo de recursos/Resource group```: Seleccione el grupo de recursos sobre el cual desea desplegar el proyecto.
       * ```Etiquetas/tags```: Agregue etiquetas si lo considera necesario.
-4. Una vez creado el proyecto de click sobre el nombre del proyecto, esto lo llevara a una nueva ventana. Aquí de click sobre el botón de ```Acceso al registro/Registry access```y de click sobre el botón de ```Crear```.
-5. Esto lo llevara a la ventana de configuración para la creación del acceso de registro, antes de completar la información debe crear una clave API. Para ello de click en la pestaña Gestionar y seleccione la opción Acceso (IAM). Posteriormente, de click en Claves API y luego en el botón Crear una clave API de IBM Cloud. Asigne un nombre, una descripción y presione el botón Crear. (No olvide guardar la clave API que acaba de crear, ya que la usará en los pasos siguientes.)
-6. Una vez generada la clave API puede terminar la configuración del acceso de registro, para esto tenga en cuenta lo siguiente:
+3. Una vez creado el proyecto de click sobre el nombre del proyecto, esto lo llevara a una nueva ventana. Aquí de click sobre el botón de ```Acceso al registro/Registry access```y de click sobre el botón de ```Crear```.
+4. Esto lo llevara a la ventana de configuración para la creación del acceso de registro, antes de completar la información debe crear una clave API. Para ello de click en la pestaña Gestionar y seleccione la opción Acceso (IAM). Posteriormente, de click en Claves API y luego en el botón Crear una clave API de IBM Cloud. Asigne un nombre, una descripción y presione el botón Crear. (No olvide guardar la clave API que acaba de crear, ya que la usará en los pasos siguientes.)
+5. Una vez generada la clave API puede terminar la configuración del acceso de registro, para esto tenga en cuenta lo siguiente:
    * En origen de registro seleccione la opción Personalizado.
    * Asigne un nombre a su registro.
    * Como servidor de registro coloque el nombre de dominio teniendo en cuenta la región. En este caso es us.icr.io.
