@@ -20,6 +20,7 @@ La presente guía está enfocada en el despliegue de una aplicación web basica 
 * Tener instalada la CLI de Docker.
 * Tener instalado Git.
 * Tener instalado .NET Core SDK.
+<br />
 
 ## Crear y ejecutar una aplicación Dotnet localmente
 
@@ -49,6 +50,8 @@ luego de ejecutar este comando espere algunos minutos a que la aplicación muest
    
 <p align="center"><img width="700" src="https://github.com/emeloibmco/IBM-Cloud-Code-Engine-.Net/blob/ddf97cc26befd9268fa5fe40add910fca560f362/Images/ejecutar.png"></p
 
+<br />
+
 ## Publicar la aplicación ASP.NET Core
 
 Para publicar la aplicación y obtener una DLL autónoma utilice el siguiente comando:
@@ -59,7 +62,8 @@ este proceso debe otorgar un mensaje similar al que se muestra a continuación
 
    <p align="center"><img width="700" src="https://github.com/emeloibmco/IBM-Cloud-Code-Engine-.Net/blob/448011f74cb4f441dcc50053264b50608d80c2e3/Images/Publish.gif"></p
    
-   
+<br />
+      
 ## Crear el archivo Dockerfile
 
 Una vez la aplicación se haya creado y ejecutado, es necesario generar una imagen, para esto necesitamos de un archivo que contenga las instrucciones paso a paso para desplegar la imagen en un contenedor y así poder ejecutar la aplicación desde cualquier lugar, este archivo se llama Dockerfile. Para crear el archivo tenga en cuenta los siguientes pasos:
