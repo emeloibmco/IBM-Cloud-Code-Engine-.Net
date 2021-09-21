@@ -4,7 +4,7 @@ La presente guía está enfocada en el despliegue de una aplicación web basica 
 <br />
 
 ## Índice  📰
-1. [Pre-Requisitos]
+1. [Pre-Requisitos](#pre-requisitos-pencil)
 2. [Crear y ejecutar una aplicación Dotnet localmente](#crear-y-ejecutar-una-aplicación-dotnet-localmente)
 3. [Publicar la aplicación ASP.NET Core]
 4. [Crear el archivo Dockerfile]
