@@ -60,7 +60,8 @@ este proceso debe otorgar un mensaje similar al que se muestra a continuación
 
 ## Crear el archivo Dockerfile
 Una vez la aplicación se haya creado y ejecutado es necesario generar una imagen, para esto necesitamos de un archivo que contenga las instrucciones paso a paso para desplegar la imagen en un contenedor y así poder ejecutar la aplicación desde cualquier lugar, este archivo se llama Dockerfile. 
-Para crear el archivo, en la terminal de su computado muévase con el comando cd hasta la carpeta creada anteriormente ```<DIRECTORIO>```, una vez en la carpeta ejecute el siguiente comando
+
+Para crear el archivo, en la terminal de su computador muévase con el comando cd hasta la carpeta creada anteriormente ```<DIRECTORIO>```, una vez en la carpeta ejecute el siguiente comando
 ```
 vi Dockerfile
 ```  
