@@ -63,7 +63,7 @@ dotnet publish -c Release
 este proceso debe otorgar un mensaje similar al que se muestra a continuación
 
 <p align="center">
-<img width="800" alt="img8" src=https://github.com/emeloibmco/IBM-Cloud-Code-Engine-.Net/blob/a431cffbaafd5de19afbfce1149bcdcace111e57/Imagenes/ejecutar.png>
+<img width="800" alt="img8" src=https://github.com/emeloibmco/IBM-Cloud-Code-Engine-.Net/blob/6830ab3bec6daedeb3e7fd7a6c698f433dfaf04b/Imagenes/Publish.gif>
 </p>
 
 ## Crear el archivo Dockerfile
@@ -110,6 +110,11 @@ Antes de desplegar la aplicación en Code Engine es necesario crear un proyecto 
    * En nombre de usuario por defecto debe quedar iamapikey.
    * En contraseña coloque la clave API creada en el ítem 1.
    * Finalice dando click en el botón Crear.
+
+<p align="center">
+<img width="800" alt="img8" src=https://github.com/emeloibmco/IBM-Cloud-Code-Engine-.Net/blob/6830ab3bec6daedeb3e7fd7a6c698f433dfaf04b/Imagenes/Publish.gif>
+</p>
+
 
 
 ### Opción1: Comenzar con el código fuente
