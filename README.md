@@ -35,14 +35,16 @@ dotnet new webApp -o <DIRECTORIO> --no-https
 > Nota: ` Reemplace <DIRECTORIO> con el nombre del directorio o carpeta que sera creado y en donde se guardaran los achivos necesarios para la creacion de la aplicacion`
 
 
-<p align="center"><img width="700" src="https://github.com/emeloibmco/VPC-Despliegue-VSI-Acceso-SSH/blob/main/Imagenes/subnet.gif"></p
-https://github.com/emeloibmco/IBM-Cloud-Code-Engine-.Net/blob/d45c6e4f41bf583c937003335693f2d885ac4617/Images/aplicacion.png
+<p align="center"><img width="700" src="https://github.com/emeloibmco/IBM-Cloud-Code-Engine-.Net/blob/ddf97cc26befd9268fa5fe40add910fca560f362/Images/crear.png"></p
+
 
 2. En la terminal ejecute el sigueinte comando, este compliara e iniciara la aplicacion y cada vez que se realicen cambios en el codigo base de esta la reconstruira y reniniciara. Tenga en cuenta que puede detener la aplicacion en cualquier momento seleccioanndo Ctrl+C.
 ```
 dotnet watch run
 ```
   luego de ejecutar este comando espere algunos minutos a que la aplicación muestre que está escuchando en http: // localhost: 5000 y que el navegador se inicie en esa dirección. para detener este proceso de validacion y continuar con la publicacion de la aplicacion seleccione Ctrl+C para salir y cierre de ventana de la aplicacion en el navegador.
+   
+   <p align="center"><img width="700" src="https://github.com/emeloibmco/IBM-Cloud-Code-Engine-.Net/blob/ddf97cc26befd9268fa5fe40add910fca560f362/Images/ejecutar.png"></p
 
 ## Publicar la aplicación ASP.NET Core
 
