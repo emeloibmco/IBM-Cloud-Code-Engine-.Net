@@ -39,7 +39,7 @@ dotnet new webApp -o <DIRECTORIO> --no-https
 
 <br />
 
-2. En la terminal ejecute el siguiente comando, este compilara e iniciara la aplicación y cada vez que se realicen cambios en el código base de esta la reconstruirá y reiniciara. Tenga en cuenta que puede detener la aplicación en cualquier momento seleccionando Ctrl+C.
+2. En la terminal ejecute el siguiente comando, este compilara e iniciara la aplicación y cada vez que se realicen cambios en el código base de la aplicacion la reconstruirá y reiniciara. 
    
 ```
 dotnet watch run
