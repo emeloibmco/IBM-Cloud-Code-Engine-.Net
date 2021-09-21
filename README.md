@@ -112,10 +112,8 @@ Antes de desplegar la aplicación en Code Engine es necesario crear un proyecto 
    * Finalice dando click en el botón Crear.
 
 <p align="center">
-<img width="800" alt="img8" src=https://github.com/emeloibmco/IBM-Cloud-Code-Engine-.Net/blob/6830ab3bec6daedeb3e7fd7a6c698f433dfaf04b/Imagenes/Publish.gif>
+<img width="800" alt="img8" src=https://github.com/emeloibmco/IBM-Cloud-Code-Engine-.Net/blob/a74588f9d4c39b12a0072fbfcf2fb5e219b71fa1/Imagenes/project.gif>
 </p>
-
-
 
 ### Opción1: Comenzar con el código fuente
 
@@ -124,10 +122,9 @@ Para desplegar la aplicación en Code Engine mediante el código fuente es neces
 para generar la aplicación a partir del código fuente tenga en cuenta los siguientes pasos:
 
 1. Desde el menú de navegación o menú de hamburguesa seleccione la pestaña ```Code Engine```
-
-3. De click sobre el botón de ```Proyectos/Projects``` y seleccione el proyecto creado anteriormente
-4. De click sobre el botón de ```Aplicaciones/Appliactions```esto lo llevara a una nueva pestaña, aquí de click sobre el botón de ```Crear```.
-5. Esto lo llevara a una pestaña de configuración, aquí llene la información de la siguiente manera:
+2. De click sobre el botón de ```Proyectos/Projects``` y seleccione el proyecto creado anteriormente
+3. De click sobre el botón de ```Aplicaciones/Appliactions```esto lo llevara a una nueva pestaña, aquí de click sobre el botón de ```Crear```.
+4. Esto lo llevara a una pestaña de configuración, aquí llene la información de la siguiente manera:
    * ```Nombre/Name```: Ingrese un nombre para la aplicación.
    * ```Elija el código para ejecutar/Choose the code to run```: Seleccione código fuente o source code
    * ```URL del código fuente/Source code URL```: Ingrese la URL del repositorio, en este caso ingrese
