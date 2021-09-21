@@ -50,7 +50,7 @@ dotnet watch run
 luego de ejecutar este comando espere algunos minutos a que la aplicación muestre que está escuchando en http: // localhost: 5000 y que el navegador se inicie                en esa dirección. Para detener este proceso de validación y continuar con la publicación de la aplicación seleccione Ctrl+C para salir y cierre de ventana de la aplicación en el navegador.
    
 <p align="center">
-<img width="800" alt="img8" src=https://github.com/emeloibmco/IBM-Cloud-Code-Engine-.Net/blob/74cf6f0280d64130967bc8477b3d517506c1c6d8/Imagenes/crear.png>
+<img width="800" alt="img8" src=https://github.com/emeloibmco/IBM-Cloud-Code-Engine-.Net/blob/a431cffbaafd5de19afbfce1149bcdcace111e57/Imagenes/ejecutar.png>
 </p>
 <br />
 
@@ -61,6 +61,10 @@ Para publicar la aplicación y obtener una DLL autónoma utilice el siguiente co
 dotnet publish -c Release 
 ```
 este proceso debe otorgar un mensaje similar al que se muestra a continuación
+
+<p align="center">
+<img width="800" alt="img8" src=https://github.com/emeloibmco/IBM-Cloud-Code-Engine-.Net/blob/a431cffbaafd5de19afbfce1149bcdcace111e57/Imagenes/ejecutar.png>
+</p>
 
 ## Crear el archivo Dockerfile
 Una vez la aplicación se haya creado y ejecutado es necesario generar una imagen, para esto necesitamos de un archivo que contenga las instrucciones paso a paso para desplegar la imagen en un contenedor y así poder ejecutar la aplicación desde cualquier lugar, este archivo se llama Dockerfile. 
