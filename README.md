@@ -97,7 +97,7 @@ para generar la aplicacion a partir del codigo fuente tenga en cuenta los siguie
 1. Desde el menú de navegación o menú de hamburguesa seleccione la pestaña ```Code Engine```
 2. Si no tiene un proyecto creado de clik sobre el boton ```Proyectos```. Esto lo llevara a una nueva ventana, aqui de click sobre el boton ```Crear```
    2.1 en esta ventana ingrese la informacion necesaria para crear un nuevo proyecto:
-      * ```Ubicacion/location``: Seleccione la ubicación en la cual desea implementar el proyecto.
+      * ```Ubicacion/location```: Seleccione la ubicación en la cual desea implementar el proyecto.
       * ```Nombre/Name```: Ingrese un nombre unico para el proyecto.
       * ```Grupo de recursos/Resource group```: Seleccione el grupo de recursos sobre el cual desea desplegar el proyecto.
       * ```Etiquetas/tags```: Agregue etiquetas si lo considera necesario.
