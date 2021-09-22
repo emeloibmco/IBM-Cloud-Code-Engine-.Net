@@ -13,6 +13,7 @@ La presente guía está enfocada en el despliegue de una aplicación web basica 
     * [Opción 2: Ejecutar una imagen de contenedor](#opción-2-ejecutar-una-imagen-de-contenedor)
 6. [Referencias](#referencias-)
 7. [Autores](#autores-black_nib)
+
 <br />
 
 ## Pre Requisitos: pencil:
