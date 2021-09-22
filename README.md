@@ -144,6 +144,61 @@ https://github.com/emeloibmco/IBM-Cloud-Code-Engine-.Net
 <img width="800" alt="img8" src=https://github.com/emeloibmco/IBM-Cloud-Code-Engine-.Net/blob/8edbcc0d5082c170fed5816112df9e7572738ecb/Imagenes/sourcecode.gif>
 </p>
 
-      
+### Opción 2: Ejecutar una imagen de contenedor
 
+para desplegar la aplicacion ejecutando una imagen de contenedor debe tener instalada en si computador la CLI de *IBM Cloud*, si cumple con este requisito tenga en cuenta los siguientes pasos:
+1. En la terminal de su computador incie sesion en *IBM Cloud*, para esto puede utilizar alguno de estos dos comandos dependiendo de su tipo de cuenta
+```
+ibmcloud login
+```
+```
+ibmcloud login --sso
+```
+2. luego de esto seleccione la cuenta en donde se encuentra el proyecto de Code Engine creado anteriormente 
+3. Una vez ha iniciado sesión, configure el grupo de recursos y la región que está utilizando para su proyecto de Code Engine. Para ello utilice el siguiente comando:
+```
+ibmcloud target -r <REGION> -g <GRUPO_RECURSOS>
+```
+> Nota: `Reemplace <REGION> y <GRUPO_RECURSOS> con su información.`
+4. Registre el daemon de Docker local en IBM Cloud Container Registry con el comando:
+```
+ibmcloud cr login
+```
+5. Cree un espacio de nombres (namespace) dentro de IBM Cloud Container Registry para su imagen. Para ello ejecute el siguiente comando:
+```
+ibmcloud cr namespace-add <namespace>
+```
+> Nota: `Reemplace <namespace> con un nombre fácil de recordar y que esté relacionado con la imagen de la aplicación.`
+6. Obtenga informacion e identifique su Container Registry ejecutando el siguiente comando.
+```
+ibmcloud cr info
+```
+7. Cree y etiquete (-t) la imagen de Docker ejecutando el siguiente comando, reemplazando REGISTRY (en este caso es us.icr.io), NAMESPACE (es el espacio creado anteriormente), NOMBRE_IMAGEN y TAG (el nombre y el tag que tengra la imagen de la aplicacion en *IBM Cloud Container Registry*) con los valores apropiados.
+```
+docker build . -t <REGISTRY>/<NAMESPACE>/<NOMBRE_IMAGEN:TAG>
+```
+> Nota: `Tenga en cuenta que debe reemplazar: REGISTRY (en este caso es us.icr.io), NAMESPACE (es el espacio creado anteriormente), NOMBRE_IMAGEN y TAG (el nombre y el tag que tengra la imagen de la aplicacion en *IBM Cloud Container Registry*) con los valores apropiados.`
+8. Envíe la imagen de Docker a su Container Registry en IBM Cloud con el siguiente comando:
+```
+docker push <REGISTRY>/<NAMESPACE>/<NOMBRE_IMAGEN:TAG>
+```
+9. Luego de esto verifique que la imagen se haya enviado adecuadamente con el comando:
+```
+ibmcloud cr image-list
+```
+10. Una vez finalizado este proceso ingrese a <a href="https://cloud.ibm.com/"> IBM Cloud</a>. y verifique que en IBM Cloud Container Registry aparezca el espacio de nombres (namespace), el repositorio y la imagen. Tenga en cuenta los nombres que asignó en cada paso.
+
+luego de esto ya puede desplegar la imagen dentro de una aplicación en Code Engine, para esto tenga en cuenta los sigueintes pasos:
+1. Dentro del proyecto de Code Engine, seleccione la pestaña que dice Aplicaciones y posteriormente de click en el botón ```Crear```.
+2. Asigne un nombre para su aplicación.
+3. En la sección ```Elija el código que desea ejecuta/Choose the code to run``` seleccione la opción ```Imagen de contenedor/Container image```.
+4. De click en el botón Configurar imagen y coloque lo siguiente:
+   * En servidor de registro coloque el nombre de dominio que indicó en la creación del acceso a registro. En este caso es us.icr.io.
+   * En acceso a registro seleccione el nombre del acceso que creó anteriormente.
+   * Seleccione el espacio de nombres (namespace) que asignó cuando subió la imagen de la aplicación a IBM Cloud Container Registry.
+   * Seleccione el repositorio (nombre de la imagen) que asignó en IBM Cloud Container Registry.
+   * Seleccione la etiqueta de su imagen.
+   * De click en el botón Listo.
+5. En el puerto de escucha coloque 8080
+6. De click en Crear y espere unos minutos mientras que la imagen se despliega sobre la aplicación que acaba de crear.
      
