@@ -11,7 +11,8 @@ La presente guía está enfocada en el despliegue de una aplicación web basica 
 5. [Desplegar la aplicación en Code Engine](#desplegar-la-aplicación-en-code-engine)
     * [Opción1: Comenzar con el código fuente](#opción1-comenzar-con-el-código-fuente)
     * [Opción 2: Ejecutar una imagen de contenedor](#opción-2-ejecutar-una-imagen-de-contenedor)
-9. [Autores](#autores-black_nib)
+6. [Referencias]
+7. [Autores](#autores-black_nib)
 <br />
 
 ## Pre Requisitos: pencil:
@@ -209,5 +210,13 @@ luego de esto ya puede desplegar la imagen dentro de una aplicación en Code Eng
 <p align="center">
 <img width="800" alt="img8" src=https://github.com/emeloibmco/IBM-Cloud-Code-Engine-.Net/blob/8c1c32e61f42ec2816c2285844465d3e1fdc0719/Imagenes/ci.gif>
 </p>
+
+# Referencias 📖
+
+* [Acerca de IBM Cloud Code Engine](https://cloud.ibm.com/docs/codeengine).
+
+## Autores :black_nib:
+Equipo IBM Cloud Tech Sales Colombia.
+<br />
 
      
