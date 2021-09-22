@@ -10,7 +10,7 @@ La presente guía está enfocada en el despliegue de una aplicación web basica 
 4. [Crear el archivo Dockerfile](#crear-el-archivo-dockerfile)
 5. [Desplegar la aplicación en Code Engine](#desplegar-la-aplicación-en-code-engine)
     * [Opción1: Comenzar con el código fuente](#opción1-comenzar-con-el-código-fuente)
-    * [Opción 2: Ejecutar una imagen de contenedor]
+    * [Opción 2: Ejecutar una imagen de contenedor](#opción-2-ejecutar-una-imagen-de-contenedor)
 9. [Autores](#autores-black_nib)
 <br />
 
