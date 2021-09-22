@@ -186,6 +186,10 @@ docker push <REGISTRY>/<NAMESPACE>/<NOMBRE_IMAGEN:TAG>
 ```
 ibmcloud cr image-list
 ```
+<p align="center">
+<img width="800" alt="img8" src=https://github.com/emeloibmco/IBM-Cloud-Code-Engine-.Net/blob/341beab81e6c3b73fa4288430e643707d83a749f/Imagenes/ci.png>
+</p>
+
 10. Una vez finalizado este proceso ingrese a <a href="https://cloud.ibm.com/"> IBM Cloud</a>. y verifique que en IBM Cloud Container Registry aparezca el espacio de nombres (namespace), el repositorio y la imagen. Tenga en cuenta los nombres que asignó en cada paso.
 
 luego de esto ya puede desplegar la imagen dentro de una aplicación en Code Engine, para esto tenga en cuenta los sigueintes pasos:
