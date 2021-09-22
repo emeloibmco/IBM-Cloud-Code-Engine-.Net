@@ -1,4 +1,4 @@
-# IBM-Cloud-Code-Engine-.Net
+# IBM-Cloud-Code-Engine-.Net :globe_with_meridians: :computer:
 
 La presente guía está enfocada en el despliegue de una aplicación web basica de ASP.NET Core en Code Engine de *IBM Cloud*.
 <br />
@@ -14,7 +14,7 @@ La presente guía está enfocada en el despliegue de una aplicación web basica 
 6. [Referencias](#referencias-)
 7. [Autores](#autores-black_nib)
 
-## Pre Requisitos: pencil:
+## Pre Requisitos :pencil:
 * Contar con una cuenta en <a href="https://cloud.ibm.com/"> IBM Cloud</a>.
 * Tener instalada la CLI de IBM Cloud.
 * Tener instalada la CLI de Docker.
@@ -22,7 +22,7 @@ La presente guía está enfocada en el despliegue de una aplicación web basica 
 * Tener instalado .NET Core SDK.
 <br />
 
-## Crear y ejecutar una aplicación Dotnet localmente
+## Crear y ejecutar una aplicación Dotnet localmente :envelope_with_arrow:
 
 Antes de iniciar con la creación de la aplicación es necesario verificar que tenga instalado Dotnet adecuadamente, para esto abra la terminal de su computador y ejecute el siguiente comando:
 ```
@@ -54,7 +54,7 @@ luego de ejecutar este comando espere algunos minutos a que la aplicación muest
 </p>
 <br />
 
-## Publicar la aplicación ASP.NET Core
+## Publicar la aplicación ASP.NET Core :calling:
 
 Para publicar la aplicación y obtener una DLL autónoma utilice el siguiente comando:
 ```
@@ -66,7 +66,7 @@ este proceso debe otorgar un mensaje similar al que se muestra a continuación
 <img width="800" alt="img8" src=https://github.com/emeloibmco/IBM-Cloud-Code-Engine-.Net/blob/6830ab3bec6daedeb3e7fd7a6c698f433dfaf04b/Imagenes/Publish.gif>
 </p>
 
-## Crear el archivo Dockerfile
+## Crear el archivo Dockerfile :bookmark_tabs:
 Una vez la aplicación se haya creado y ejecutado es necesario generar una imagen, para esto necesitamos de un archivo que contenga las instrucciones paso a paso para desplegar la imagen en un contenedor y así poder ejecutar la aplicación desde cualquier lugar, este archivo se llama Dockerfile. 
 
 Para crear el archivo, en la terminal de su computador muévase con el comando cd hasta la carpeta creada anteriormente ```<DIRECTORIO>```, una vez en la carpeta ejecute el siguiente comando
@@ -89,7 +89,7 @@ ENV ASPNETCORE_URLS=http://*:8080
 
 <br />
 
-## Desplegar la aplicación en Code Engine
+## Desplegar la aplicación en Code Engine 
 
 Antes de desplegar la aplicación en Code Engine es necesario crear un proyecto y un acceso al registro dentro de este proyecto, para esto tenga en cuenta los siguientes pasos:
 
