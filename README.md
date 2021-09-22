@@ -207,7 +207,7 @@ luego de esto ya puede desplegar la imagen dentro de una aplicación en Code Eng
 6. De click en Crear y espere unos minutos mientras que la imagen se despliega sobre la aplicación que acaba de crear.
 
 <p align="center">
-<img width="800" alt="img8" src=https://github.com/emeloibmco/IBM-Cloud-Code-Engine-.Net/blob/341beab81e6c3b73fa4288430e643707d83a749f/Imagenes/ci.png>
+<img width="800" alt="img8" src=https://github.com/emeloibmco/IBM-Cloud-Code-Engine-.Net/blob/8c1c32e61f42ec2816c2285844465d3e1fdc0719/Imagenes/ci.gif>
 </p>
 
      
