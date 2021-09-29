@@ -214,7 +214,7 @@ luego de esto ya puede desplegar la imagen dentro de una aplicación en Code Eng
 </p>
 
 
-### Opcion 3 repositorio privado
+### OpciÓn 3 repositorio privado:
 
 # Referencias 📖
 
