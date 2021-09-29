@@ -115,7 +115,9 @@ Antes de desplegar la aplicación en Code Engine es necesario crear un proyecto 
 <img width="800" alt="img8" src=https://github.com/emeloibmco/IBM-Cloud-Code-Engine-.Net/blob/a74588f9d4c39b12a0072fbfcf2fb5e219b71fa1/Imagenes/project.gif>
 </p>
 
-### Opción1: Comenzar con el código fuente
+Una vez creado el proyecto y el acceso de registo se puede pasar a desplegar la aplicacion, para esto se tienen distintas opciones dependiendo de la configuracion del repositorio (privado o publico). A continuacion se explican cada una de estas.
+
+### Opción1 repositorio publico: Comenzar con el código fuente 
 
 Para desplegar la aplicación en Code Engine mediante el código fuente es necesario tener el código en un repositorio de github, en este caso el código de la aplicación básica generada ya se encuentra en este repositorio. Si se tiene una aplicación distinta se debe generar el repositorio.
 
@@ -144,7 +146,7 @@ https://github.com/emeloibmco/IBM-Cloud-Code-Engine-.Net
 <img width="800" alt="img8" src=https://github.com/emeloibmco/IBM-Cloud-Code-Engine-.Net/blob/8edbcc0d5082c170fed5816112df9e7572738ecb/Imagenes/sourcecode.gif>
 </p>
 
-### Opción 2: Ejecutar una imagen de contenedor
+### Opción 2 repositorio publico: Ejecutar una imagen de contenedor
 
 para desplegar la aplicacion ejecutando una imagen de contenedor debe tener instalada en si computador la CLI de *IBM Cloud*, si cumple con este requisito tenga en cuenta los siguientes pasos:
 1. En la terminal de su computador incie sesion en *IBM Cloud*, para esto puede utilizar alguno de estos dos comandos dependiendo de su tipo de cuenta
@@ -209,6 +211,9 @@ luego de esto ya puede desplegar la imagen dentro de una aplicación en Code Eng
 <p align="center">
 <img width="800" alt="img8" src=https://github.com/emeloibmco/IBM-Cloud-Code-Engine-.Net/blob/8c1c32e61f42ec2816c2285844465d3e1fdc0719/Imagenes/ci.gif>
 </p>
+
+
+### Opcion 3 repositorio privado
 
 # Referencias 📖
 
