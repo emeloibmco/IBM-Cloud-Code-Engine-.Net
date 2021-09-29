@@ -9,8 +9,8 @@ La presente guía está enfocada en el despliegue de una aplicación web basica 
 3. [Publicar la aplicación ASP.NET Core](#publicar-la-aplicación-aspnet-core)
 4. [Crear el archivo Dockerfile](#crear-el-archivo-dockerfile)
 5. [Desplegar la aplicación en Code Engine](#desplegar-la-aplicación-en-code-engine)
-    * [Opción1 repositorio público: Comenzar con el código fuente](#opción1-repositorio-público-comenzar-con-el-código-fuente)
-    * [Opción 2: Ejecutar una imagen de contenedor](#opción-2-ejecutar-una-imagen-de-contenedor)
+    * [Opción 1 repositorio público: Comenzar con el código fuente](#opción-1-repositorio-público-comenzar-con-el-código-fuente)
+    * [Opción 2 repositorio público: Ejecutar una imagen de contenedor](#opción-2-repositorio-público-ejecutar-una-imagen-de-contenedor)
 6. [Referencias](#referencias-)
 7. [Autores](#autores-black_nib)
 
@@ -117,7 +117,7 @@ Antes de desplegar la aplicación en Code Engine es necesario crear un proyecto 
 
 Una vez creado el proyecto y el acceso de registo se puede pasar a desplegar la aplicacion, para esto se tienen distintas opciones dependiendo de la configuracion del repositorio (privado o publico). A continuacion se explican cada una de estas.
 
-### Opción1 repositorio público: Comenzar con el código fuente 
+### Opción 1 repositorio público: Comenzar con el código fuente 
 
 Para desplegar la aplicación en Code Engine mediante el código fuente es necesario tener el código en un repositorio de github, en este caso el código de la aplicación básica generada ya se encuentra en este repositorio. Si se tiene una aplicación distinta se debe generar el repositorio.
 
