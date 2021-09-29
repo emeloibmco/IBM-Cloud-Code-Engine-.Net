@@ -216,6 +216,29 @@ luego de esto ya puede desplegar la imagen dentro de una aplicación en Code Eng
 
 ### Opción 3 repositorio privado:
 
+#### Compilar imagen de referencia
+Luego de crear el acceso al repositorio privado de Git este se utiliza para la creación de la imagen, para esto tenga en cuenta los siguientes pasos:
+
+1. En la ventana principal o dasboard de *Code Engine* seleccione el proyecto creado anteriormente.
+2. Desde la venta del proyecto de click sobre el botón de ```Image builds/Creación de imágenes``` una vez aquí de click sobre el botón de ```Crear```.
+3. Esto lo llevara a una pestaña de configuración, aquí llene la información de la siguiente manera:
+   * ```Name```: Ingrese un nombre único para la construcción de la imagen.
+   * ```Code repo URL```: Ingrese la URL SSH de su repositorio privado.
+   * ```Code repo access```: Seleccione el acceso de repositorio creado anteriormente.
+   * ```Branch name```: Ingrese el nombre la rama del repositorio de origen en la cual se encuentra la infoermacion.
+   * De click en ```Next```, esto lo llevara a la ventana de configuración de estrategia.
+   * Deje la información predeterminada y de click en ```Next```, esto lo llevara a la ventana de configuración de salida.
+   * ```Registry server```: Seleccione el servidor en el cual esta desplegado su proyecto, en este caso es ```us.icr.io```.
+   * ```Registry access```: Seleccione el acceso de registro creado anteriormente.
+   * ```Namespace```: Seleccione un namespace existente o ingrese un nombre con el cual se creará uno automáticamente.
+   * ```Repository (image name)```: Ingrese el nombre con el cual se creara la imagen.
+   * ```Tag```: Ingrese la etiqueta de la versión de la imagen si aplica.
+   * de click en ```Done```
+ 
+Una vez completados estos pasos ya tiene creada la imagen de la aplicación
+
+ 
+
 # Referencias 📖
 
 * [Acerca de IBM Cloud Code Engine](https://cloud.ibm.com/docs/codeengine).
