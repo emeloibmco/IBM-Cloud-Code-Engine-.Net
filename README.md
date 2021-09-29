@@ -235,7 +235,19 @@ Luego de crear el acceso al repositorio privado de Git este se utiliza para la c
    * ```Tag```: Ingrese la etiqueta de la versión de la imagen si aplica.
    * de click en ```Done```
  
-Una vez completados estos pasos ya tiene creada la imagen de la aplicación
+Una vez completados estos pasos ya tiene creada la imagen de la aplicación.
+
+#### Despliegue de la aplicación 
+
+Para desplegar la aplicación tenga en cuenta los siguientes pasos:
+
+1. En la ventana principal o dasboard de *Code Engine* seleccione el proyecto creado anteriormente.
+2. Desde la venta del proyecto de click sobre el botón de ```Image builds/Creación de imágenes```, seleccione la imagen que acabo de crear anteriormente.
+3. En la ventana de la imagen de click sobre el botón ```Submit build```, deje la información predeterminada y de click de nuevo sobre ```Submit build```.
+4. Espere unos minutos a que se termine el proceso de despliegue de la aplicación.
+5. Para acceder a la aplicación regrese a la ventana del proyecto y de click sobre el botón ```Applications```, allí podrá encontrar la aplicación que se acabo de crear.
+
+
 
  
 
