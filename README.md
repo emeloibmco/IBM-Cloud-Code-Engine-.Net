@@ -215,6 +215,45 @@ luego de esto ya puede desplegar la imagen dentro de una aplicación en Code Eng
 
 
 ### Opción 3 repositorio privado:
+Con Code Engine, puede agregar acceso a un repositorio de código privado y luego hacer referencia a ese repositorio desde su compilación. Después de crear el acceso a su repositorio de código privado, puede extraer código del repositorio, compilarlo y desplegar una aplicación o trabajo con IBM Cloud ™ Code Engine. Siga los pasos mostrados a continuación:
+
+#### Crear llave SSH y asociarla al repositorio de github
+
+1.	Cree una ssh key para posteriormente asociara a su repositorio privado, para generarla acceda al *IBM Cloud Shell* y coloque el comando:
+ 
+```
+ssh-keygen -t rsa -C "user_id"
+```
+
+-	Al ejecutar el comando anterior, en la consola se pide que especifique la ubicación, en este caso oprima la tecla Enter para que se guarde en la ubicación sugerida. Posteriormente, cuando se pida la ```Passphrase```oprima la tecla Enter para dejarlo vacio, ya que no se aceptan ssh-keys con passphrase.
+
+-	A continuación muévase con el comando ```cd .ssh``` a la carpeta donde están los archivos ```id_rsa.pub``` y ```id_rsa```. Estos archivos contienen las claves públicas y privadas respectivamente.  
+
+-	Visualice la clave pública y la clave privada, asegúrese de guardarlas, ya que las necesitará próximamente. Utilice el comando:
+```
+cat id_rsa.pub
+```
+Y para visualizar la llave privada:
+```
+cat id_rsa
+```
+2.	Asocie la clave ssh creada anteriormente a su repositorio de github, para esto complete lo siguiente:
+Estando en su repostiorio de github, ingrese a ```settings``` > ```deploy keys```, de click en ```add deploy keys``` e  ingrese lo siguiente en los campos específicos:
+* ```Title```: Especifique un titulo único para la llave.
+* ```key```: Ingrese la clave pública que guardo previamente.
+
+Por último, de click en ```add key```.
+
+#### Crear el code repository access
+
+Ingrese a su proyecto en code engine y del menú de la izquierda, elija la opción ```code repo access``` y de click en ```crear```. De la ventana desplegada complete lo siguiente:
+* ```Name```: Especifique un nombre único para el acceso.
+* ```Code repo server```: Ingrese github.com
+* ```ssh private key ```: Ingrese la clave privada que guardo previamente.
+
+Por último, de click en ```create```.
+
+
 
 #### Compilar imagen de referencia
 Luego de crear el acceso al repositorio privado de Git este se utiliza para la creación de la imagen, para esto tenga en cuenta los siguientes pasos:
