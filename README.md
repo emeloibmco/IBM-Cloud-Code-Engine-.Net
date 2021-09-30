@@ -304,7 +304,7 @@ Para desplegar la aplicación tenga en cuenta los siguientes pasos:
 
 
 <p align="center">
-<img width="800" alt="img8" src=https://github.com/emeloibmco/IBM-Cloud-Code-Engine-.Net/blob/main/Imagenes/despliegue.gif>
+<img width="800" alt="img8" src=https://github.com/emeloibmco/IBM-Cloud-Code-Engine-.Net/blob/main/Imagenes/despliegue2.gif>
 </p>
 
 
