@@ -294,13 +294,17 @@ Una vez completados estos pasos ya tiene creada la imagen de la aplicación.
 Para desplegar la aplicación tenga en cuenta los siguientes pasos:
 
 1. En la ventana principal o dasboard de *Code Engine* seleccione el proyecto creado anteriormente.
-2. Desde la venta del proyecto de click sobre el botón de ```Image builds/Creación de imágenes```, seleccione la imagen que acabo de crear anteriormente.
-3. En la ventana de la imagen de click sobre el botón ```Submit build```, deje la información predeterminada y de click de nuevo sobre ```Submit build```.
-4. Espere unos minutos a que se termine el proceso de despliegue de la aplicación.
-5. Para acceder a la aplicación regrese a la ventana del proyecto y de click sobre el botón ```Applications```, allí podrá encontrar la aplicación que se acabo de crear.
+2. Desde la venta del proyecto de click sobre el botón de ```Applications```, luego de esto de click sobre el boton de ```Create```.
+3. Esto lo llevara a una pestaña de configuración, aquí llene la información de la siguiente manera:
+   * ```Name```: Ingrese un nobre unico para su aplicacion.
+   * ```Choose the code to run```: Seleccione la opcion de ```Container image/Imagen de contenedor```.
+   * ```Image reference```: Ingrese la referencia de la imagen creada anteriormente, esta la puede encontrar en la ventana de ```Output```en la pagina de informacion de la imagen.
+   * De click en el boton de configure image, esto lo llevara a una pestaña de configuracion, ingrese el registry access creado anteriormente y deje la informacion predeterminada y de click en el boton ```Done```.
+   * ```Listening port override```: Ingrese el puerto de escucha de su aplicacion.
+
 
 <p align="center">
-<img width="800" alt="img8" src=https://github.com/emeloibmco/IBM-Cloud-Code-Engine-.Net/blob/main/Imagenes/despliegue2.gif>
+<img width="800" alt="img8" src=https://github.com/emeloibmco/IBM-Cloud-Code-Engine-.Net/blob/main/Imagenes/despliegue.gif>
 </p>
 
 
