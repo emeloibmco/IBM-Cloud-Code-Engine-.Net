@@ -299,9 +299,12 @@ Para desplegar la aplicación tenga en cuenta los siguientes pasos:
 4. Espere unos minutos a que se termine el proceso de despliegue de la aplicación.
 5. Para acceder a la aplicación regrese a la ventana del proyecto y de click sobre el botón ```Applications```, allí podrá encontrar la aplicación que se acabo de crear.
 
+<p align="center">
+<img width="800" alt="img8" src=https://github.com/emeloibmco/IBM-Cloud-Code-Engine-.Net/blob/main/Imagenes/despliegue.gif>
+</p>
 
 
- 
+
 
 # Referencias 📖
 
