@@ -11,7 +11,7 @@ La presente guía está enfocada en el despliegue de una aplicación web basica 
 5. [Desplegar la aplicación en Code Engine](#desplegar-la-aplicación-en-code-engine)
     * [Opción 1 repositorio público: Comenzar con el código fuente](#opción-1-repositorio-público-comenzar-con-el-código-fuente)
     * [Opción 2 repositorio público: Ejecutar una imagen de contenedor](#opción-2-repositorio-público-ejecutar-una-imagen-de-contenedor)
-    * [Opción 3 repositorio privado:](#opción-3-repositorio-privado)
+    * [Opción 3 repositorio privado](#opción-3-repositorio-privado)
 6. [Referencias](#referencias-)
 7. [Autores](#autores-black_nib)
 
@@ -214,10 +214,10 @@ luego de esto ya puede desplegar la imagen dentro de una aplicación en Code Eng
 </p>
 
 
-### Opción 3 repositorio privado:
+### Opción 3 repositorio privado
 Con Code Engine, puede agregar acceso a un repositorio de código privado y luego hacer referencia a ese repositorio desde su compilación. Después de crear el acceso a su repositorio de código privado, puede extraer código del repositorio, compilarlo y desplegar una aplicación o trabajo con IBM Cloud ™ Code Engine. Siga los pasos mostrados a continuación:
 
-#### Crear llave SSH y asociarla al repositorio de github
+#### Crear llave SSH y asociarla al repositorio de github 🔑
 
 1.	Cree una ssh key para posteriormente asociara a su repositorio privado, para generarla acceda al *IBM Cloud Shell* y coloque el comando:
  
@@ -248,7 +248,7 @@ Por último, de click en ```add key```.
 <img width="800" alt="img8" src=https://github.com/emeloibmco/IBM-Cloud-Code-Engine-.Net/blob/main/Imagenes/github.gif>
 </p>
 
-#### Crear el code repository access
+#### Crear el code repository access 🚪
 
 Ingrese a su proyecto en code engine y del menú de la izquierda, elija la opción ```code repo access``` y de click en ```crear```. De la ventana desplegada complete lo siguiente:
 * ```Name```: Especifique un nombre único para el acceso.
@@ -263,7 +263,7 @@ Por último, de click en ```create```.
 
 
 
-#### Compilar imagen de referencia
+#### Compilar imagen de referencia ▶️
 Luego de crear el acceso al repositorio privado de Git este se utiliza para la creación de la imagen, para esto tenga en cuenta los siguientes pasos:
 
 1. En la ventana principal o dasboard de *Code Engine* seleccione el proyecto creado anteriormente.
@@ -289,7 +289,7 @@ Una vez completados estos pasos ya tiene creada la imagen de la aplicación.
 </p>
 
 
-#### Despliegue de la aplicación 
+#### Despliegue de la aplicación 💻
 
 Para desplegar la aplicación tenga en cuenta los siguientes pasos:
 
