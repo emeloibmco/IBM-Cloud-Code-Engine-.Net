@@ -284,6 +284,11 @@ Luego de crear el acceso al repositorio privado de Git este se utiliza para la c
  
 Una vez completados estos pasos ya tiene creada la imagen de la aplicación.
 
+<p align="center">
+<img width="800" alt="img8" src=https://github.com/emeloibmco/IBM-Cloud-Code-Engine-.Net/blob/main/Imagenes/imagen.gif>
+</p>
+
+
 #### Despliegue de la aplicación 
 
 Para desplegar la aplicación tenga en cuenta los siguientes pasos:
