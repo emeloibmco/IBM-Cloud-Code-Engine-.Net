@@ -244,6 +244,10 @@ Estando en su repostiorio de github, ingrese a ```settings``` > ```deploy keys``
 
 Por último, de click en ```add key```.
 
+<p align="center">
+<img width="800" alt="img8" src=https://github.com/emeloibmco/IBM-Cloud-Code-Engine-.Net/blob/74cf6f0280d64130967bc8477b3d517506c1c6d8/Imagenes/github.gif>
+</p>
+
 #### Crear el code repository access
 
 Ingrese a su proyecto en code engine y del menú de la izquierda, elija la opción ```code repo access``` y de click en ```crear```. De la ventana desplegada complete lo siguiente:
@@ -252,6 +256,10 @@ Ingrese a su proyecto en code engine y del menú de la izquierda, elija la opci�
 * ```ssh private key ```: Ingrese la clave privada que guardo previamente.
 
 Por último, de click en ```create```.
+
+<p align="center">
+<img width="800" alt="img8" src=https://github.com/emeloibmco/IBM-Cloud-Code-Engine-.Net/blob/74cf6f0280d64130967bc8477b3d517506c1c6d8/Imagenes/code.gif>
+</p>
 
 
 
