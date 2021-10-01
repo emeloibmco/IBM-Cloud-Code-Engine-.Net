@@ -11,7 +11,8 @@ La presente guía está enfocada en el despliegue de una aplicación web basica 
 5. [Desplegar la aplicación en Code Engine](#desplegar-la-aplicación-en-code-engine)
     * [Opción 1 repositorio público: Comenzar con el código fuente](#opción-1-repositorio-público-comenzar-con-el-código-fuente)
     * [Opción 2 repositorio público: Ejecutar una imagen de contenedor](#opción-2-repositorio-público-ejecutar-una-imagen-de-contenedor)
-    * [Opción 3 repositorio privado:](#opción-3-repositorio-privado)
+    * [Opción 3 repositorio privado en github:](#opción-3-repositorio-privado-en-github)
+    * [Opción 4 Repositorio privado en azure:](#opción-4-repositorio-privado-en-azure)
 6. [Referencias](#referencias-)
 7. [Autores](#autores-black_nib)
 
@@ -214,7 +215,7 @@ luego de esto ya puede desplegar la imagen dentro de una aplicación en Code Eng
 </p>
 
 
-### Opción 3 repositorio privado:
+### Opción 3 repositorio privado en github:
 Con Code Engine, puede agregar acceso a un repositorio de código privado y luego hacer referencia a ese repositorio desde su compilación. Después de crear el acceso a su repositorio de código privado, puede extraer código del repositorio, compilarlo y desplegar una aplicación o trabajo con IBM Cloud ™ Code Engine. Siga los pasos mostrados a continuación:
 
 #### Crear llave SSH y asociarla al repositorio de github
@@ -307,6 +308,95 @@ Para desplegar la aplicación tenga en cuenta los siguientes pasos:
 <img width="800" alt="img8" src=https://github.com/emeloibmco/IBM-Cloud-Code-Engine-.Net/blob/main/Imagenes/despliegue2.gif>
 </p>
 
+### Opción 4 Repositorio privado en azure:
+Igualmente *Code Engine* le permite cargar la aplicación desde un repositorio privado en Azure, los pasos son muy similares al paso anterior, donde se cargó un repositorio privado desde github y se muestran a continuación:
+
+#### Cree una llave SSH y asociela al repositorio de azure :key:
+
+1.	Cree una ssh key para posteriormente asociara a su repositorio privado, para generarla acceda al *IBM Cloud Shell* y coloque el comando:
+ 
+```
+ssh-keygen -t rsa -C "user_id"
+```
+
+-	Al ejecutar el comando anterior, en la consola se pide que especifique la ubicación, en este caso oprima la tecla Enter para que se guarde en la ubicación sugerida. Posteriormente, cuando se pida la ```Passphrase```oprima la tecla Enter para dejarlo vacio, ya que no se aceptan ssh-keys con passphrase.
+
+-	A continuación muévase con el comando ```cd .ssh``` a la carpeta donde están los archivos ```id_rsa.pub``` y ```id_rsa```. Estos archivos contienen las claves públicas y privadas respectivamente.  
+
+-	Visualice la clave pública y la clave privada, asegúrese de guardarlas, ya que las necesitará próximamente. Utilice el comando:
+```
+cat id_rsa.pub
+```
+Y para visualizar la llave privada:
+```
+cat id_rsa
+```
+2.	Asocie la clave ssh creada anteriormente a su repositorio en azure, para esto complete lo siguiente:
+Estando en su proyecto de azure,  ingrese a ```User settings``` > ```SSH public keys```, de click en ```+ New key``` e  ingrese lo siguiente en los campos específicos:
+* ```Name```: Especifique un nombre único para la llave.
+* ```Public Key Data```: Ingrese la clave pública que guardo previamente.
+
+Por último, de click en ```Add```.
+
+<p align="center">
+<img width="800" alt="img8" src=https://github.com/emeloibmco/IBM-Cloud-Code-Engine-.Net/blob/main/Imagenes/sshazure.gif>
+</p>
+
+#### Crear el code repository access :door:
+
+Ingrese a su proyecto en code engine y del menú de la izquierda, elija la opción ```code repo access``` y de click en ```create```. De la ventana desplegada complete lo siguiente:
+* ```Name```: Especifique un nombre único para el acceso.
+* ```Code repo server```: Ingrese ssh.dev.azure.com
+* ```ssh private key ```: Ingrese la clave privada que guardo previamente.
+
+Por último, de click en ```create```.
+
+<p align="center">
+<img width="800" alt="img8" src=https://github.com/emeloibmco/IBM-Cloud-Code-Engine-.Net/blob/main/Imagenes/codeazure.gif>
+</p>
+
+#### Compilar imagen de referencia ▶️
+Luego de crear el acceso al repositorio privado de azure este se utiliza para la creación de la imagen, para esto tenga en cuenta los siguientes pasos:
+
+Ingrese a su proyecto en code engine y del menú de la izquierda, elija la opción ```Image builds``` y de click en ```create```. De la ventana desplegada complete lo siguiente:
+
+   * ```Name```: Ingrese un nombre único para la construcción de la imagen.
+   * ```Code repo URL```: Ingrese la URL SSH de su repositorio privado.
+   * ```Code repo access```: Seleccione el acceso de repositorio creado anteriormente.
+   * ```Branch name```: Ingrese el nombre la rama del repositorio de origen en la cual se encuentra la aplicación. (En este caso master)
+   
+ De click en ```Next```, esto lo llevara a la ventana de configuración de estrategia, deje la información predeterminada y de click en ```Next```, esto lo llevará a la ventana de configuración de salida, complete lo siguiente:
+ 
+   * ```Registry server```: Seleccione el servidor en el cual esta desplegado su proyecto, en este caso es ```us.icr.io```.
+   * ```Registry access```: Seleccione el acceso de registro. Puede dejar por defecto Automatic.
+   * ```Namespace```: Seleccione un namespace existente o ingrese un nombre con el cual se creará uno automáticamente.
+   * ```Repository (image name)```: Ingrese el nombre con el cual se creará la imagen.
+   * ```Tag```: Opcionalmente ingrese la etiqueta de la versión de la imagen.
+  
+  De click en ```Done```. Una vez el build se encuentre en estado "Ready", de click en "Submit build", en la ventana que se despliega deje todos los datos por defectos y de click nuevamente en "Submit build", finalmente espere a que su estado sea "Succeeded".
+ 
+
+<p align="center">
+<img width="800" alt="img8" src=https://github.com/emeloibmco/IBM-Cloud-Code-Engine-.Net/blob/main/Imagenes/build.gif>
+</p>
+
+
+#### Despliegue de la aplicación 💻
+
+Ingrese a su proyecto en code engine y del menú de la izquierda, elija la opción ```Applications``` y de click en ```create```. De la ventana desplegada complete lo siguiente:
+
+   * ```Name```: Ingrese un nombre único para su aplicación.
+   * ```Choose the code to run```: Seleccione la opción de ```Container image/Imagen de contenedor```.
+   * ```Image reference```: Ingrese la referencia de la imagen creada anteriormente, esta la puede encontrar en la ventana de ```Output```en la pagina de información de la imagen.
+   * De click en el botón de configure image, esto lo llevara a una pestaña de configuración, ingrese el registry access creado anteriormente y deje la información predeterminada y de click en el boton ```Done```.
+   * ```Listening port override```: Ingrese el puerto de escucha de su aplicación.
+
+Finalmente de click en "Create", una vez su aplicación este lista, puede ingresar dando click en "Open application URL". 
+
+
+<p align="center">
+<img width="800" alt="img8" src=https://github.com/emeloibmco/IBM-Cloud-Code-Engine-.Net/blob/main/Imagenes/app.gif>
+</p>
 
 
 
