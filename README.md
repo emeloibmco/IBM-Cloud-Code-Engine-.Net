@@ -11,8 +11,8 @@ La presente guía está enfocada en el despliegue de una aplicación web basica 
 5. [Desplegar la aplicación en Code Engine](#desplegar-la-aplicación-en-code-engine)
     * [Opción 1 repositorio público: Comenzar con el código fuente](#opción-1-repositorio-público-comenzar-con-el-código-fuente)
     * [Opción 2 repositorio público: Ejecutar una imagen de contenedor](#opción-2-repositorio-público-ejecutar-una-imagen-de-contenedor)
-    * [Opción 3 repositorio privado en github:](#opción-3-repositorio-privado-en-github)
-    * [Opción 4 Repositorio privado en azure:](#opción-4-repositorio-privado-en-azure)
+    * [Opción 3 repositorio privado en github](#opción-3-repositorio-privado-en-github)
+    * [Opción 4 Repositorio privado en azure](#opción-4-repositorio-privado-en-azure)
 6. [Referencias](#referencias-)
 7. [Autores](#autores-black_nib)
 
